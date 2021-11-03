@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/style.css"/>
+    <title>Document</title>
+</head>
+<body>
+        <header class="w-full">
+            <nav class="bg-gray-800 h-12 grid grid-cols-3 w-full">
+                <h1 class="text-white inline self-center text-2xl ml-12">RealSale</h1>
+                <ul class="text-white inline justify-self-center self-center">
+                    <li class="inline mx-4"><a href="#">Home</a></li>
+                    <li class="inline mx-4"><a href="#">Dashboard</a></li>
+                    <li class="inline mx-4"><a href="#">My Item</a></li>
+                    <li class="inline mx-4"><a href="#">Account</a></li>
+                </ul>
+                <div class="inline self-center">
+                    <input class="w-64 rounded px-2 outline-none"/>
+                    <button class="bg-green-400 w-20 rounded text-white">Search</button>
+                </div>
+            </nav>
+            <main class="container mx-auto px-32">
+                <div class="bg-gray-200 h-8">
+                    <h4 class="ml-12 text-bold">HotList</h4>
+                </div>
+            </main>
+        </header>
+        <section class=" grid grid-cols-2 bg-white mx-32 my-6 min-h-0 shadow-lg border-2 border-gray-400">
+            <aside class="justify-self-center">
+                <div class="bg-gray-300  w-32 h-32 my-4 rounded-full mx-auto">
+                    <img src="../img/P-icon.svg" class="m-auto py-12 w-8 cursor-pointer" type="file"/>
+                </div>
+                <section class="border-gray-400 border-2 w-72 h-64">
+                    <p class="my-6 mx-4 text-2xl">Hello Username!!!</p>
+                    <p class="my-6 mx-4 text-xl">Number of Item:24</p>
+                    <a href="#" class="my-4 text-xl mx-4">See all Item</a>
+                </section>
+            </aside>
+            <form class="justify-self-center border-2 border-gray-300 my-8 px-6">
+                <h1 class="text-center my-4">ADD ITEM</h1>
+                <input placeholder="Name" class="h-8 w-72 rounded outline-none border-2 border-gray-400 my-2"/><br/>
+                <input placeholder="price" class="h-8 w-72 rounded outline-none border-2 border-gray-400 my-2"/><br/>
+                <input type="file" class="my-4"/><br/>
+                <textarea placeholder="decription" class="w-72 h-36 rounded outline-none border-2 border-gray-400"></textarea><br/>
+                <button class="my-4 bg-green-400 text-white w-20 h-8 rounded">Add Item</button>
+            </form>
+        </section>
+        <footer class="bg-gray-800 h-24 text-center text-white">
+            <p class="pt-8">About Us    Contact Us Privacy Policy   Terms & Conditions   frequently asked questions</p>
+        </footer>
+</body>
+</html>
