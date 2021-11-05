@@ -29,6 +29,9 @@
             </main>
         </header>
         <section class=" grid grid-cols-2 bg-white mx-32 my-6 min-h-0 shadow-lg border-2 border-gray-400">
+            <% if (messages){ %>
+            <p><%= messages.error%></p>
+            <% }%>
             <form class="justify-self-center">
                 <h1 class="text-center m-4 text-xl font-semibold">Login</h1>
                 <div class="m-4">
@@ -41,7 +44,10 @@
                 </div>
                 <button class="m-4 bg-green-400 text-white w-20 h-8 rounded">Login</button>
             </form>
-            <form class="justify-self-center">
+            <% if (messages){ %>
+                <p><%= messages.error%></p>
+                <% }%>
+            <form class="justify-self-center" action="/account" method="POST">
                 <h1 class="text-center m-4 text-xl font-semibold">Register</h1>
                 <div class="m-4">
                     <label>Username</label><br/>
@@ -53,13 +59,13 @@
                 </div>
                 <div class="m-4">
                     <label>Password</label><br/>
-                    <input class="h-8 w-72 rounded outline-none border-2 border-gray-400"/>
+                    <input class="h-8 w-72 rounded outline-none border-2 border-gray-400" type="password"/>
                 </div>
                 <div class="m-4">
                     <label>Password2</label><br/>
-                    <input class="h-8 w-72 rounded outline-none border-2 border-gray-400"/>
+                    <input class="h-8 w-72 rounded outline-none border-2 border-gray-400" type="password"/>
                 </div>
-                <button class="m-4 bg-green-400 text-white w-20 h-8 rounded">Register</button>
+                <button class="m-4 bg-green-400 text-white w-20 h-8 rounded" type="submit">Register</button>
             </form>
         </section>
         <footer class="bg-gray-800 h-24 text-center text-white">
