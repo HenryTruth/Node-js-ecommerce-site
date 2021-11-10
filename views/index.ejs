@@ -1,109 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="assets/style.css"/>
-    <title>Document</title>
-</head>
+    <%- include('./partials/head.ejs'); %>
 <body>
-        <header class="w-full">
-            <nav class="bg-gray-800 h-12 grid grid-cols-3 w-full">
-                <h1 class="text-white inline self-center text-2xl ml-12">RealSale</h1>
-                <ul class="text-white inline justify-self-center self-center">
-                    <li class="inline mx-4"><a href="#">Home</a></li>
-                    <li class="inline mx-4"><a href="#">Dashboard</a></li>
-                    <li class="inline mx-4"><a href="#">My Item</a></li>
-                    <li class="inline mx-4"><a href="#">Account</a></li>
-                </ul>
-                <div class="inline self-center">
-                    <input class="w-64 rounded px-2 outline-none"/>
-                    <button class="bg-green-400 w-20 rounded text-white">Search</button>
-                </div>
-            </nav>
-            <main class="container mx-auto px-32">
-                <div class="bg-gray-200 h-8">
-                    <h4 class="ml-12 text-bold">HotList</h4>
-                </div>
-            </main>
-        </header>
-        <section class=" grid grid-cols-4 bg-gray-200 mx-32 my-6 min-h-0">
-            <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-                <img src="assets/img/acer.png" class="w-40 mx-auto m-4"/>
-                <div class="">
-                    <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                    <P class="text-center">Alien ware CPU hardware 4g ram SSD</P>
-                    <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-                </div>
+    <header class="w-full">
+        <%- include('./partials/header.ejs'); %> 
+    </header>
+    <section class=" grid grid-cols-4 bg-gray-200 mx-32 my-6 min-h-0">
+        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
+            <img src="assets/img/acer.png" class="w-40 mx-auto m-4"/>
+            <div class="">
+                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
+                <P class="text-center">Alien ware CPU hardware 4g ram SSD</P>
+                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
             </div>
-            <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-                <img src="assets/img/acer2.png" class="w-40 mx-auto m-4"/>
-                <div class="">
-                    <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                    <P class="text-center"> Omen 360 1gb SSD
-                    1Trb, wide screen,6
-                    gb ram, 4gb</P>
-                    <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-                </div>
+        </div>
+        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
+            <img src="assets/img/acer2.png" class="w-40 mx-auto m-4"/>
+            <div class="">
+                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
+                <P class="text-center"> Omen 360 1gb SSD
+                1Trb, wide screen,6
+                gb ram, 4gb</P>
+                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
             </div>
-            <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-                <img src="assets/img/acer3.png" class="w-40 mx-auto m-4"/>
-                <div class="">
-                    <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                    <P class="text-center">Alien Ware Zero 1trb
-                    SSD, 8gb ram,6gb</P>
-                    <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-                </div>
+        </div>
+        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
+            <img src="assets/img/acer3.png" class="w-40 mx-auto m-4"/>
+            <div class="">
+                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
+                <P class="text-center">Alien Ware Zero 1trb
+                SSD, 8gb ram,6gb</P>
+                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
             </div>
-            <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-                <img src="assets/img/acer4.png" class="w-40 mx-auto m-4"/>
-                <div>
-                    <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                    <P class="text-center">Predator lazer,4gb
-                    ram, 4gb dedicated CPU hardware</P>
-                    <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-                </div>
+        </div>
+        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
+            <img src="assets/img/acer4.png" class="w-40 mx-auto m-4"/>
+            <div>
+                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
+                <P class="text-center">Predator lazer,4gb
+                ram, 4gb dedicated CPU hardware</P>
+                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
             </div>
-            <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-                <img src="assets/img/acer5.png" class="w-40 mx-auto m-4"/>
-                <div>
-                    <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                    <P class="text-center">Predator Cycle, 4gb
-                    ram, 500gb SSD</P>
-                    <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-                </div>
+        </div>
+        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
+            <img src="assets/img/acer5.png" class="w-40 mx-auto m-4"/>
+            <div>
+                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
+                <P class="text-center">Predator Cycle, 4gb
+                ram, 500gb SSD</P>
+                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
             </div>
-            <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-                <img src="assets/img/acer6.png" class="w-32 mx-auto m-4"/>
-                <div>
-                    <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                    <P class="text-center">Acer Core, !Trb SSD
-                    6gb dedicated</P>
-                    <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-                </div>
+        </div>
+        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
+            <img src="assets/img/acer6.png" class="w-32 mx-auto m-4"/>
+            <div>
+                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
+                <P class="text-center">Acer Core, !Trb SSD
+                6gb dedicated</P>
+                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
             </div>
-            <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-                <img src="assets/img/acer7.png" class="w-40 mx-auto m-4"/>
-                <div>
-                    <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                    <P class="text-center">Razer Ware, HD LED
-                    Red keyboard Light</P>
-                    <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-                </div>
+        </div>
+        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
+            <img src="assets/img/acer7.png" class="w-40 mx-auto m-4"/>
+            <div>
+                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
+                <P class="text-center">Razer Ware, HD LED
+                Red keyboard Light</P>
+                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
             </div>
-            <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-                <img src="assets/img/acer8.png" class="w-40 mx-auto m-4"/>
-                <div>
-                    <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                    <P class="text-center">Predator Switch LED
-                    16gb ram</P>
-                    <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-                </div>
+        </div>
+        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
+            <img src="assets/img/acer8.png" class="w-40 mx-auto m-4"/>
+            <div>
+                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
+                <P class="text-center">Predator Switch LED
+                16gb ram</P>
+                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
             </div>
-        </section>
-        <footer class="bg-gray-800 h-24 text-center text-white">
-            <p class="pt-8">About Us    Contact Us    Privacy Policy   Terms & Conditions   frequently asked questions</p>
-        </footer>
+        </div>
+    </section>
+    <footer class="bg-gray-800 h-24 text-center text-white">
+        <%- include('./partials/footer'); %>
+    </footer>
 </body>
 </html>

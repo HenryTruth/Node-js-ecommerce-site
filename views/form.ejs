@@ -1,32 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/style.css"/>
-    <title>Document</title>
+    <%- include('./partials/head.ejs'); %>
 </head>
 <body>
         <header class="w-full">
-            <nav class="bg-gray-800 h-12 grid grid-cols-3 w-full">
-                <h1 class="text-white inline self-center text-2xl ml-12">RealSale</h1>
-                <ul class="text-white inline justify-self-center self-center">
-                    <li class="inline mx-4"><a href="#">Home</a></li>
-                    <li class="inline mx-4"><a href="#">Dashboard</a></li>
-                    <li class="inline mx-4"><a href="#">My Item</a></li>
-                    <li class="inline mx-4"><a href="#">Account</a></li>
-                </ul>
-                <div class="inline self-center">
-                    <input class="w-64 rounded px-2 outline-none"/>
-                    <button class="bg-green-400 w-20 rounded text-white">Search</button>
-                </div>
-            </nav>
-            <main class="container mx-auto px-32">
-                <div class="bg-gray-200 h-8">
-                    <h4 class="ml-12 text-bold">HotList</h4>
-                </div>
-            </main>
+            <%- include('./partials/header.ejs'); %> 
         </header>
         <section class=" grid bg-white mx-32 my-6 min-h-0 shadow-lg border-2 border-gray-400">
             <form class="justify-self-center border-2 border-gray-300 my-8 px-6">
@@ -39,7 +18,7 @@
             </form>
         </section>
         <footer class="bg-gray-800 h-24 text-center text-white">
-            <p class="pt-8">About Us    Contact Us    Privacy Policy   Terms & Conditions   frequently asked questions</p>
+            <%- include('./partials/footer'); %>>
         </footer>
 </body>
 </html>
