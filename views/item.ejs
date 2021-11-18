@@ -10,7 +10,7 @@
         <section class=" grid bg-gray-200 mx-auto h-96 w-3/12  min-h-0 shadow-lg border-2 my-4">
             <% if(product){ %>
                 <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2 mx-auto">
-                    <img src='./uploads/<%= product.filePath %>' class="w-40 mx-auto m-4"/>
+                    <img src='./../uploads/<%= product.filePath %>' class="w-40 mx-auto m-4"/>
                     <div class="">
                         <p class="text-center text-xl"><span class="text-red-600">#</span><%= product.price %></p>
                         <P class="text-center"><%= product.productName %></P>
