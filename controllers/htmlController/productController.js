@@ -36,7 +36,6 @@ module.exports = function(app){
     app.get('/',checkAuthenticated, (req, res) => {
         Product.find()
         .then(product => {
-            console.log(product)
             res.render('index', {product:product})
         })
         .catch(err => {
@@ -66,10 +65,8 @@ module.exports = function(app){
         }) 
         .then( data => {
             if(!data){
-                console.log(data, 'its data')
                 res.render('index', {product:data})
             }else{
-                console.log(data, 'other data')
                 res.render('index', {product:data})
             }
         })
@@ -165,7 +162,6 @@ module.exports = function(app){
             if(!data){
                 res.render('item', {product:data})
             }else{
-                console.log(data)
                 res.render('item', {product:data})
             }
         })
@@ -179,7 +175,6 @@ module.exports = function(app){
             Product.find({name:id})
             .then(data => {
                 if(!data){
-                    console.log(data, 'not data')
                     res.render('myItem', {product:data})
                 }else{
                     console.log(data, 'found data')
