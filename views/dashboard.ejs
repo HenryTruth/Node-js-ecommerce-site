@@ -18,13 +18,13 @@
                     <a href="#" class="my-4 text-xl mx-4">See all Item</a>
                 </section>
             </aside>
-            <form class="justify-self-center border-2 border-gray-300 my-8 px-6">
+            <form  action="/upload" enctype="multipart/form-data" class="justify-self-center border-2 border-gray-300 my-8 px-6" method="POST">
                 <h1 class="text-center my-4">ADD ITEM</h1>
-                <input placeholder="Name" class="h-8 w-72 rounded outline-none border-2 border-gray-400 my-2"/><br/>
-                <input placeholder="price" class="h-8 w-72 rounded outline-none border-2 border-gray-400 my-2"/><br/>
-                <input type="file" class="my-4"/><br/>
-                <textarea placeholder="decription" class="w-72 h-36 rounded outline-none border-2 border-gray-400"></textarea><br/>
-                <button class="my-4 bg-green-400 text-white w-20 h-8 rounded">Add Item</button>
+                <input placeholder="name" type="text" name="name" class="h-8 w-72 rounded outline-none border-2 border-gray-400 my-2"/><br/>
+                <input placeholder="price" type="text" name="price" class="h-8 w-72 rounded outline-none border-2 border-gray-400 my-2"/><br/>
+                <input name="uploaded_file" type="file" class="my-4"/><br/>
+                <textarea placeholder="decription" type="text" name="description" class="w-72 h-36 rounded outline-none border-2 border-gray-400"></textarea><br/>
+                <button class="my-4 bg-green-400 text-white w-20 h-8 rounded" type="submit">Add Item</button>
             </form>
             <form action="logout?_method=DELETE">
                 <button type="submit">LOGOUT</button>

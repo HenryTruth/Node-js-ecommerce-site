@@ -1,20 +1,15 @@
 const passport = require("passport")
 const bcrypt = require('bcryptjs')
 const User = require("../../models/User")
-const express = require('express');
+
+
 const {
     checkAuthenticated,
     checkNotAuthenticated
 } = require('../../middleware/auth')
 
+module.exports = function(app){
 
-
-
-module.exports = function(app) {
-	app.get('/',checkAuthenticated, (req, res) => {
-        res.render('index');
-    });
-    
     app.get('/account',checkNotAuthenticated, function(req, res){
         res.render('account')
     })
@@ -69,21 +64,7 @@ module.exports = function(app) {
     })
     
     app.get('/dashboard',checkAuthenticated, function(req, res){
-        console.log(req.user)
+
         res.render('dashboard', {name:req.user.name})
     })
-    
-    app.get('/form', function(req,res){
-        res.render('form')
-    })
-    
-    app.get('/item', function(req,res){
-        res.render('item')
-    })
-    
-    app.get('/myitem', function(req,res){
-        res.render('myItem')
-    })
-    
 }
-

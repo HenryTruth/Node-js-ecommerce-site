@@ -3,16 +3,19 @@
     <ul class="text-white inline justify-self-center self-center">
         <li class="inline mx-4"><a href="/">Home</a></li>
         <li class="inline mx-4"><a href="/dashboard">Dashboard</a></li>
-        <li class="inline mx-4"><a href="/item">My Item</a></li>
+        <li class="inline mx-4"><a href="/myItem">My Item</a></li>
         <li class="inline mx-4"><a href="/account">Account</a></li>
     </ul>
-    <div class="inline self-center">
-        <input class="w-64 rounded px-2 outline-none"/>
+    <form class="inline self-center" method="POST" action="/search">
+        <input class="w-64 rounded px-2 outline-none" name="search" type="text"/>
         <button class="bg-green-400 w-20 rounded text-white">Search</button>
-    </div>
+    </form>
 </nav>
 <main class="container mx-auto px-32">
     <div class="bg-gray-200 h-8">
         <h4 class="ml-12 text-bold">HotList</h4>
     </div>
 </main>
+
+
+

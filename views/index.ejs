@@ -5,80 +5,24 @@
     <header class="w-full">
         <%- include('./partials/header.ejs'); %> 
     </header>
-    <section class=" grid grid-cols-4 bg-gray-200 mx-32 my-6 min-h-0">
-        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-            <img src="assets/img/acer.png" class="w-40 mx-auto m-4"/>
-            <div class="">
-                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                <P class="text-center">Alien ware CPU hardware 4g ram SSD</P>
-                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-            </div>
-        </div>
-        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-            <img src="assets/img/acer2.png" class="w-40 mx-auto m-4"/>
-            <div class="">
-                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                <P class="text-center"> Omen 360 1gb SSD
-                1Trb, wide screen,6
-                gb ram, 4gb</P>
-                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-            </div>
-        </div>
-        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-            <img src="assets/img/acer3.png" class="w-40 mx-auto m-4"/>
-            <div class="">
-                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                <P class="text-center">Alien Ware Zero 1trb
-                SSD, 8gb ram,6gb</P>
-                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-            </div>
-        </div>
-        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-            <img src="assets/img/acer4.png" class="w-40 mx-auto m-4"/>
-            <div>
-                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                <P class="text-center">Predator lazer,4gb
-                ram, 4gb dedicated CPU hardware</P>
-                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-            </div>
-        </div>
-        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-            <img src="assets/img/acer5.png" class="w-40 mx-auto m-4"/>
-            <div>
-                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                <P class="text-center">Predator Cycle, 4gb
-                ram, 500gb SSD</P>
-                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-            </div>
-        </div>
-        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-            <img src="assets/img/acer6.png" class="w-32 mx-auto m-4"/>
-            <div>
-                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                <P class="text-center">Acer Core, !Trb SSD
-                6gb dedicated</P>
-                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-            </div>
-        </div>
-        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-            <img src="assets/img/acer7.png" class="w-40 mx-auto m-4"/>
-            <div>
-                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                <P class="text-center">Razer Ware, HD LED
-                Red keyboard Light</P>
-                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-            </div>
-        </div>
-        <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
-            <img src="assets/img/acer8.png" class="w-40 mx-auto m-4"/>
-            <div>
-                <p class="text-center text-xl"><span class="text-red-600">#</span>70,000</p>
-                <P class="text-center">Predator Switch LED
-                16gb ram</P>
-                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
-            </div>
-        </div>
-    </section>
+    <% if(!product){ %>
+        <h1>No Items</h1>
+    <% } else { %>
+            <section class=" grid grid-cols-4 bg-gray-200 mx-32 my-6 min-h-0">
+                    <% for(const item in product){ %> 
+                    <div class="bg-white w-52 m-4 justify-self-center h-80 rounded shadow-lg grid grid-rows-2">
+                        <img src='./uploads/<%= product[item].filePath %>' class="w-40 mx-auto m-4"/>
+                        <div>
+                            <p class="text-center text-xl"><span class="text-red-600">#</span><%= product[item].price %></p>
+                            <P class="text-center"><%=product[item].productName %> </P>
+                            <a href="/item/<%= product[item]._id %>">
+                                <button class="text-center text-white rounded-md bg-green-400 ml-12 mt-4 py-2 px-6">checkout</button>
+                            </a>
+                        </div>
+                    </div>
+                    <% } %>
+            </section>
+        <% } %>
     <footer class="bg-gray-800 h-24 text-center text-white">
         <%- include('./partials/footer'); %>
     </footer>

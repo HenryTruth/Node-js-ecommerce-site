@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 
+
 const port = process.env.port || 3000
 const mongoose = require('mongoose');
 
@@ -18,7 +19,7 @@ const initailizePassport = require('./config/passport-config')
 const db = require('./config/keys').mongoURI;
 
 const apiController = require('./controllers/apiController/apiController');
-const htmlController = require('./controllers/htmlController/htmlController');
+const htmlController = require('./controllers/htmlController/mainController');
 
 
 mongoose
@@ -33,6 +34,7 @@ mongoose
 app.use(express.urlencoded({extended:false}))
 
 app.use('/assets', express.static(__dirname + '/public'));
+app.use('/uploads', express.static('uploads'))
 
 
 app.set('view engine', 'ejs');
@@ -43,7 +45,8 @@ require('dotenv').config();
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-
+// or simply { dest: 'uploads/' }
+app.use(express.static('/public'))
 
 initailizePassport(
     passport,
